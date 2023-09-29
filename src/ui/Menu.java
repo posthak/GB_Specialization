@@ -12,6 +12,7 @@ import ui.commands.AddHorse;
 import ui.commands.Exit;
 import ui.commands.GetListCommand;
 import ui.commands.Option;
+import ui.commands.ShowAnimal;
 import ui.commands.UpdateCommand;
 
 public class Menu {
@@ -27,6 +28,7 @@ public class Menu {
         commands.add(new AddDonkey(console));
         commands.add(new GetListCommand(console));
         commands.add(new UpdateCommand(console));
+        commands.add(new ShowAnimal(console));
         commands.add(new Exit(console));
     }
 

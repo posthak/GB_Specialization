@@ -1,6 +1,12 @@
 package animalgroup;
 
 import animal.Animal;
+import animal.Camel;
+import animal.Cat;
+import animal.Dog;
+import animal.Donkey;
+import animal.Hamster;
+import animal.Horse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +26,28 @@ public class AnimalGroup {
         }
     }
 
-    public void addAnimal(Animal animal) {
-        animalList.add(animal);
+    public void addCat(Cat cat) {
+        animalList.add(cat);
+    }
+
+    public void addDog(Dog dog) {
+        animalList.add(dog);
+    }
+
+    public void addHamster(Hamster hamster) {
+        animalList.add(hamster);
+    }
+
+    public void addHorse(Horse horse) {
+        animalList.add(horse);
+    }
+
+    public void addCamel(Camel camel) {
+        animalList.add(camel);
+    }
+
+    public void addDonkey(Donkey donkey) {
+        animalList.add(donkey);
     }
 
     public List<Animal> getAnimalList() {

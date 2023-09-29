@@ -3,8 +3,6 @@ package ui;
 import java.time.Instant;
 import java.util.Scanner;
 
-import animal.AnimalForm;
-import animal.Animaltype;
 import presenter.Presenter;
 
 public class Console implements View {
@@ -52,6 +50,11 @@ public class Console implements View {
         presenter.getListCommand();
     }
 
+    public void showAnimal() {
+
+        presenter.getAnimalList();
+    }
+
     public void updateCommand() {
         // String animalName;
         // Instant dateOfBirth;
@@ -80,7 +83,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Cat, Instant.now(), animalName, Animaltype.homeAnimal, command);
+        presenter.addCat(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 
@@ -95,7 +98,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Dog, Instant.now(), animalName, Animaltype.homeAnimal, command);
+        presenter.addDog(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 
@@ -110,7 +113,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Hamster, Instant.now(), animalName, Animaltype.homeAnimal, command);
+        presenter.addHamster(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 
@@ -125,7 +128,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Horse, Instant.now(), animalName, Animaltype.packAnimal, command);
+        presenter.addHorse(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 
@@ -140,7 +143,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Camel, Instant.now(), animalName, Animaltype.packAnimal, command);
+        presenter.addCamel(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 
@@ -155,7 +158,7 @@ public class Console implements View {
         System.out.println("Введите команду для животного");
         command = scanner.nextLine();
 
-        presenter.addAnimal(AnimalForm.Donkey, Instant.now(), animalName, Animaltype.packAnimal, command);
+        presenter.addDonkey(Instant.now(), animalName, command);
         presenter.getAnimalList();
     }
 

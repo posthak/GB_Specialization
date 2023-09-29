@@ -3,7 +3,7 @@ package animal;
 
 import java.time.Instant;
 
-public class Animal {
+public abstract class Animal {
     private int id;
     private AnimalForm animalForm;
     private Instant dateOfBirth;
