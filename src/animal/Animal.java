@@ -1,40 +1,55 @@
-import java.io.Serializable;
 
-public class Animal implements Serializable {
-    private String fullName;
-    private Integer age;
-    // private Gender gender;
+package animal;
 
-    public Animal(String fullName, /* Gender gender, */ Integer age) {
-        this.fullName = fullName;
-        // this.gender = gender;
-        this.age = age;
+import java.time.Instant;
+
+public class Animal {
+    private int id;
+    private AnimalForm animalForm;
+    private Instant dateOfBirth;
+    private String animalName;
+    private Animaltype animalType;
+    private String command;
+
+    public Animal(AnimalForm animalForm, Instant dateOfBirth, String animalName, Animaltype animalType,
+            String command) {
+        this.id = Counter.add();
+        this.animalForm = animalForm;
+        this.animalName = animalName;
+        this.animalType = animalType;
+        this.dateOfBirth = dateOfBirth;
+        this.command = command;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getAnimalName() {
+        return animalName;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getCommand() {
+        return command;
     }
 
-    // public Gender getGender() {
-    // return gender;
-    // }
+    public void setCommand(String command) {
+        this.command = command;
+    }
 
-    // @Override
-    // public String toString() {
-    // return "Person{" +
-    // "name='" + fullName + '\'' +
-    // '}' + "\n";
-    // }
+    public Integer getId() {
+        return id;
+    }
+
+    public Animaltype getAnimalType() {
+        return animalType;
+    }
+
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + fullName + '\'' +
-                ", Age=" + age +
-                // ", Gender='" + gender + '\'' +
+        return "Animal{" + "\n" +
+                ", AnimalForm='" + animalForm + '\'' +
+                ", Id='" + id + '\'' +
+                ", AnimalName='" + animalName + '\'' +
+                ", DateOfBirth='" + dateOfBirth + '\'' +
+                ", Command='" + command + '\'' +
+                ", AnimalType=" + animalType +
                 '}' + "\n";
     }
 
